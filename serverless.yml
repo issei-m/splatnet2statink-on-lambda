@@ -19,7 +19,7 @@ functions:
   post_unuploaded_battles:
     handler: handler.main
     events:
-      - schedule: cron(0/15 * * * * *)
+      - schedule: cron(0/15 * * * ? *)
 
 package:
   exclude:
