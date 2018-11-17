@@ -52,3 +52,7 @@ No previously-unuploaded battles found.
 ```
 (venv $ node_modules/.bin/sls deploy
 ```
+
+## License 
+
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0/) in according with the original source.
