@@ -12,6 +12,7 @@ provider:
   runtime: python3.6
   memorySize: 512
   timeout: 30
+  stage: prod
   region: ap-northeast-1
 
 functions:
