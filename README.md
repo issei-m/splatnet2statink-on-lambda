@@ -50,7 +50,7 @@ No previously-unuploaded battles found.
 6. Deploy to AWS Lambda using Serverless:
 
 ```
-(venv $ node_modules/.bin/sls deploy
+(venv) $ node_modules/.bin/sls deploy
 ```
 
 ## License 
