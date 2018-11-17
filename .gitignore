@@ -1,2 +1,5 @@
 config.txt
 *.pyc
+
+/venv/
+/.serverless/
