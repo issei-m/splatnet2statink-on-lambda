@@ -12,7 +12,6 @@ provider:
   runtime: python3.6
   memorySize: 512
   timeout: 30
-  stage: dev
   region: ap-northeast-1
 
 functions:
@@ -23,4 +22,12 @@ functions:
 
 package:
   exclude:
+    - .*
+    - __pycache__/**
+    - venv/**
     - node_modules/**
+    - serverless.yml
+    - package*.json
+    - requirements.txt
+    - README.md
+    - LICENSE
