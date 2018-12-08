@@ -21,6 +21,7 @@ weapons = {
 	46:   'octoshooter_replica',    # Octo Shot Replica
 	50:   '52gal',                  # .52 Gal
 	51:   '52gal_deco',             # .52 Gal Deco
+	52:   '52gal_becchu',           # Kensa .52 Gal
 	60:   'nzap85',                 # N-ZAP '85
 	61:   'nzap89',                 # N-ZAP '89
 	70:   'prime',                  # Splattershot Pro
@@ -42,6 +43,7 @@ weapons = {
 	231:  'clashblaster_neo',       # Clash Blaster Neo
 	240:  'rapid',                  # Rapid Blaster
 	241:  'rapid_deco',             # Rapid Blaster Deco
+	242:  'rapid_becchu',           # Kensa Rapid Blaster
 	250:  'rapid_elite',            # Rapid Blaster Pro
 	251:  'rapid_elite_deco',       # Rapid Blaster Pro Deco
 	300:  'l3reelgun',              # L-3 Nozzlenose
@@ -94,16 +96,21 @@ weapons = {
 	3021: 'screwslosher_neo',       # Sloshing Machine Neo
 	3022: 'screwslosher_becchu',    # Kensa Sloshing Machine
 	3030: 'furo',                   # Bloblobber
+	3031: 'furo_deco',              # Bloblobber Deco
 	3040: 'explosher',              # Explosher
+	3041: 'explosher_custom',       # Custom Explosher
 	4000: 'splatspinner',           # Mini Splatling
 	4001: 'splatspinner_collabo',   # Zink Mini Splatling
+	4002: 'splatspinner_becchu',    # Kensa Mini Splatling
 	4010: 'barrelspinner',          # Heavy Splatling
 	4011: 'barrelspinner_deco',     # Heavy Splatling Deco
 	4015: 'herospinner_replica',    # Hero Splatling Replica
 	4020: 'hydra',                  # Hydra Splatling
 	4021: 'hydra_custom',           # Custom Hydra Splatling
 	4030: 'kugelschreiber',         # Ballpoint Splatling
+	4031: 'kugelschreiber_hue',     # Ballpoint Splatling Nouveau
 	4040: 'nautilus47',             # Nautilus 47
+	4041: 'nautilus79',             # Nautilus 79
 	5000: 'sputtery',               # Dapple Dualies
 	5001: 'sputtery_hue',           # Dapple Dualies Nouveau
 	5010: 'maneuver',               # Splat Dualies
@@ -112,6 +119,7 @@ weapons = {
 	5015: 'heromaneuver_replica',   # Hero Dualie Replicas
 	5020: 'kelvin525',              # Glooga Dualies
 	5021: 'kelvin525_deco',         # Glooga Dualies Deco
+	5022: 'kelvin525_becchu',       # Kensa Glooga Dualies
 	5030: 'dualsweeper',            # Dualie Squelchers
 	5031: 'dualsweeper_custom',     # Custom Dualie Squelchers
 	5040: 'quadhopper_black',       # Dark Tetra Dualies
@@ -774,7 +782,9 @@ abilities = {
 	108: 'ability_doubler',
 	109: 'stealth_jump',
 	110: 'object_shredder',
-	111: 'drop_roller'
+	111: 'drop_roller',
+	200: 'bomb_defense_up_dx',
+	201: 'main_power_up'
 }
 
 # Colors for the profile image's background
