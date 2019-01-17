@@ -21,7 +21,7 @@ functions:
     events:
       - name: at-every-schedule-rotation
       - description: At every schedule rotation.
-      - schedule: cron(0 1/2 * * ? *)
+      - schedule: cron(0 */2 * * ? *)
 
 package:
   exclude:
