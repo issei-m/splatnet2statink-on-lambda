@@ -20,7 +20,7 @@ from distutils.version import StrictVersion
 from subprocess import call
 # PIL/Pillow imported at bottom
 
-A_VERSION = "1.4.0"
+A_VERSION = "1.4.1"
 
 print("splatnet2statink v{}".format(A_VERSION))
 
@@ -55,7 +55,7 @@ debug = False # print out payload and exit. can use with geargrabber2.py & savin
 if "app_timezone_offset" in config_data:
 	app_timezone_offset = str(config_data["app_timezone_offset"])
 else:
-	app_timezone_offset = str(int(time.timezone/60))
+	app_timezone_offset = str(int((time.mktime(time.gmtime()) - time.mktime(time.localtime()))/60))
 
 if "app_unique_id" in config_data:
 	app_unique_id = str(config_data["app_unique_id"])
@@ -135,7 +135,10 @@ def gen_new_cookie(reason):
 		acc_name, new_cookie = iksm.get_cookie(SESSION_TOKEN, USER_LANG, A_VERSION)
 	config_data["cookie"] = new_cookie
 	write_config(config_data)
-	print("Wrote iksm_session cookie for {} to config.txt.".format(acc_name))
+	if manual:
+		print("Wrote iksm_session cookie to config.txt.")
+	else:
+		print("Wrote iksm_session cookie for {} to config.txt.".format(acc_name))
 
 def write_config(tokens):
 	'''Writes config file and updates the global variables.'''
