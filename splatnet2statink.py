@@ -20,22 +20,29 @@ from distutils.version import StrictVersion
 from subprocess import call
 # PIL/Pillow imported at bottom
 
-A_VERSION = "1.4.1"
+A_VERSION = "1.4.2"
 
 print("splatnet2statink v{}".format(A_VERSION))
 
+# place config.txt in same directory as script (bundled or not)
+if getattr(sys, 'frozen', False):
+	app_path = os.path.dirname(sys.executable)
+elif __file__:
+	app_path = os.path.dirname(__file__)
+config_path = os.path.join(app_path, "config.txt")
+
 try:
-	config_file = open("config.txt", "r")
+	config_file = open(config_path, "r")
 	config_data = json.load(config_file)
 	config_file.close()
 except (IOError, ValueError):
 	print("Generating new config file.")
 	config_data = {"api_key": "", "cookie": "", "user_lang": "", "session_token": ""}
-	config_file = open("config.txt", "w")
+	config_file = open(config_path, "w")
 	config_file.seek(0)
 	config_file.write(json.dumps(config_data, indent=4, sort_keys=True, separators=(',', ': ')))
 	config_file.close()
-	config_file = open("config.txt", "r")
+	config_file = open(config_path, "r")
 	config_data = json.load(config_file)
 	config_file.close()
 
@@ -143,12 +150,12 @@ def gen_new_cookie(reason):
 def write_config(tokens):
 	'''Writes config file and updates the global variables.'''
 
-	config_file = open("config.txt", "w")
+	config_file = open(config_path, "w")
 	config_file.seek(0)
 	config_file.write(json.dumps(tokens, indent=4, sort_keys=True, separators=(',', ': ')))
 	config_file.close()
 
-	config_file = open("config.txt", "r")
+	config_file = open(config_path, "r")
 	config_data = json.load(config_file)
 
 	global API_KEY
