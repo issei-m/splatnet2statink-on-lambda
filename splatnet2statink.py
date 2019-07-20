@@ -21,7 +21,7 @@ from distutils.version import StrictVersion
 from subprocess import call
 # PIL/Pillow imported at bottom
 
-A_VERSION = "1.5.0"
+A_VERSION = "1.5.1"
 
 print("splatnet2statink v{}".format(A_VERSION))
 
@@ -966,7 +966,7 @@ def post_battle(i, results, s_flag, t_flag, m_flag, sendgears, debug, ismonitor=
 		if ver4:
 			synergy_mult = results[i]["uniform_bonus"]
 			if synergy_mult > 1:
-				points_gained *= synergy_mult
+				points_gained = round(points_gained * synergy_mult)
 
 		# SPECIAL CASE - KING/QUEEN MAX
 		if title_before == 4 and title_after == 4 and fest_exp_after == 0:
@@ -1085,8 +1085,8 @@ def post_battle(i, results, s_flag, t_flag, m_flag, sendgears, debug, ismonitor=
 						payload["image_result"] = bytes_result.getvalue()
 		if sendgears: # if most recent
 			url_profile = "https://app.splatoon2.nintendo.net/api/share/profile"
-			if stage == 9999: # fav_stage can't be Shifty Station
-				stages_ints = [k for k in translate_stages.keys() if k != 9999 and isinstance(k, int)]
+			if stage >= 100: # fav_stage can't be Shifty Station(s)
+				stages_ints = [k for k in translate_stages.keys() if isinstance(k, int) and k < 100]
 				fav_stage = random.choice(stages_ints)
 			else:
 				fav_stage = stage
