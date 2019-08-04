@@ -199,7 +199,7 @@ stages = {
 	121:  'mystery_21', # Shifty: Bridge to Tentaswitchia
 	122:  'mystery_22', # Shifty: The Chronicles of Rolonium
 	123:  'mystery_23', # Shifty: Furler in the Ashes
-	# :   'mystery_24', # Shifty: MC.Princess Diaries
+	124 : 'mystery_24', # Shifty: MC.Princess Diaries
 	9999: 'mystery',    # Shifty Station
 
 	# clearly the funniest way to go about doing this
@@ -227,30 +227,30 @@ stages = {
 	'anchovy':    'Games',
 	'mutsugoro':  'Pavilion',
 	'mystery':    'Shifty',
-	'mystery_01': 'Shifty: Side Platforms',
-	'mystery_02': 'Shifty: Center Platforms',
-	'mystery_03': 'Shifty: Sponges',
-	'mystery_04': 'Shifty: Windmills',
-	'mystery_05': 'Shifty: Big Spreader',
-	'mystery_06': 'Shifty: Invisible',
-	'mystery_07': 'Shifty: Cannons',
+	'mystery_01': 'Shifty: Wayslide',
+	'mystery_02': 'Shifty: S.P.L.A.T.',
+	'mystery_03': 'Shifty: Goosponge',
+	'mystery_04': 'Shifty: Windmill',
+	'mystery_05': 'Shifty: Spew',
+	'mystery_06': 'Shifty: Glass',
+	'mystery_07': 'Shifty: Cannon',
 	'mystery_08': 'Shifty: Bunker',
-	'mystery_09': 'Shifty: Grapplinks',
-	'mystery_10': 'Shifty: Ink Switches',
+	'mystery_09': 'Shifty: Grapplink',
+	'mystery_10': 'Shifty: Longshocking',
 	'mystery_11': 'Shifty: Balance',
 	'mystery_12': 'Shifty: Tentacles',
-	'mystery_13': 'Shifty: Splat-Switches',
-	'mystery_14': 'Shifty: Bounce Pads',
-	'mystery_15': 'Shifty: Ride Rails',
-	'mystery_16': 'Shifty: Gushers',
-	'mystery_17': 'Shifty: Dash Tracks',
+	'mystery_13': 'Shifty: Switches',
+	'mystery_14': 'Shifty: Bouncey',
+	'mystery_15': 'Shifty: Railway',
+	'mystery_16': 'Shifty: Gusher',
+	'mystery_17': 'Shifty: Dasher',
 	'mystery_18': 'Shifty: Flooders',
 	'mystery_19': 'Shifty: Zones',
-	'mystery_20': 'Shifty: Switch-Spreaders',
-	'mystery_21': 'Shifty: Switch-Platform',
+	'mystery_20': 'Shifty: Spreading',
+	'mystery_21': 'Shifty: Tentaswitchia',
 	'mystery_22': 'Shifty: Rolonium',
-	'mystery_23': 'Shifty: Inkfurlers',
-	'mystery_24': 'Shifty: Final'
+	'mystery_23': 'Shifty: Furler',
+	'mystery_24': 'Shifty: Diaries'
 }
 
 # Gear database
@@ -658,6 +658,7 @@ clothes = {
 	21009: 'office_attire',
 	21010: 'srl_coat',
 	22000: 'mecha_body_akm',
+	23000: 'splatfest_tee_replica',
 	25000: 'school_uniform',
 	25001: 'samurai_jacket',
 	25002: 'power_armor',
